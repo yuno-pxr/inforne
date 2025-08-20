@@ -1,14 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
-}
-
-export default nextConfig
+  output: 'export',
+  images: { unoptimized: true },
+  basePath: '/inforne',   // ユーザーサイト直下に出すならこの行は削除
+  trailingSlash: true,
+};
+export default nextConfig;
